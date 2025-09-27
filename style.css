@@ -1,235 +1,72 @@
-/*
- * Global styles for Arsalan Shemirani personal website
- * Designed to be clean, modern and responsive.
- */
-
-:root {
-  --primary-color: #040d21;
-  --accent-color: #64ffda;
-  --text-color: #333;
-  --bg-color: #f7f9fc;
-  --nav-height: 70px;
-  --max-width: 1100px;
-}
-
-html, body {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Navigation */
 header {
-  background: var(--primary-color);
-  color: #fff;
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #0a0a23;
+  color: #ffffff;
 }
 
 nav {
-  width: 100%;
-  max-width: var(--max-width);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
-}
-
-nav .logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  align-items: center;
+  padding: 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 }
 
-nav li {
-  margin-left: 1.5rem;
-}
-
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
 }
 
-nav a:hover {
-  color: var(--accent-color);
-}
-
-/* Hero Section */
-.hero {
-  height: 70vh;
-  background-image: url("images/hero.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 1rem;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(2px);
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1.25rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #52e0c4;
-}
-
-/* Content Sections */
-.section {
-  padding: 4rem 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #e6eaf0;
-}
-
-.section.dark {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.section .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.section p {
-  line-height: 1.6;
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Projects Cards */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.project-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: var(--primary-color);
-}
-
-.project-card p {
-  margin-bottom: 1rem;
-}
-
-.project-card a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-card a:hover {
+nav a.active {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  background-color: var(--primary-color);
-  color: #fff;
+.hero {
+  background-color: #f0f0f0;
   padding: 2rem 1rem;
   text-align: center;
 }
 
-footer .social-links a {
-  display: inline-block;
-  margin: 0 0.5rem;
-  color: var(--accent-color);
-  font-size: 1.2rem;
-  text-decoration: none;
+.section {
+  padding: 2rem 1rem;
 }
 
-footer .social-links a:hover {
-  color: #fff;
+.section.dark {
+  background-color: #f9f9f9;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero {
-    height: 60vh;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+
+.posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.posts-list li {
+  margin-bottom: 2rem;
 }
